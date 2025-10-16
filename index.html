@@ -475,7 +475,7 @@
             <div class="about-content">
                 <p>Master's graduate in Biomedical Engineering with expertise in computer vision, deep learning, and
                     medical imaging. Currently working as a Machine Learning Scientist at BC Cancer, developing advanced
-                    multimodal vision-language models for automated tumor segmentation in PET/CT imaging.</p>
+                    multimodal vision-language models for PET/CT related problems.</p>
             </div>
         </div>
     </section>
@@ -493,12 +493,16 @@
                     <div class="timeline-date">June 2025 – Present</div>
                 </div>
                 <ul>
-                    <li>Led development of report-guided vision-language pipeline for whole-body PSMA PET/CT using 3D
-                        SegResNet with decoder cross-attention</li>
-                    <li>Implemented multimodal text features with token loaders for LLM embeddings and sanitization</li>
-                    <li>Engineered CrossAttention3D with InstanceNorm/LayerNorm stabilization and multi-head attention
+                    <li>Led the development of a report-guided vision-language pipeline for whole-body PSMA PET/CT: 3D
+                        SegResNet with decoder cross-attention fusing clinical-report tokens with PET/CT for lesion
+                        segmentation.</li>
+                    <li>Implemented multimodal text features and ablations: token loaders for LLM embeddings with
+                        sanitization.</li>
+                    <li>Engineered CrossAttention3D (InstanceNorm/LayerNorm stabilization, multi-head MHA, residual
+                        projections), scaled training/eval: distributed data parallel training + mixed precision.
                     </li>
-                    <li>Achieved statistically significant reductions in false positive lesion predictions</li>
+                    <li>Outcome: statistically significant reductions in false positive lesion predictions and tighter
+                        boundaries on a held-out cohort while preserving whole-body biomarkers.</li>
                 </ul>
             </div>
 
@@ -511,9 +515,10 @@
                     <div class="timeline-date">Jul 2024 – Feb 2025</div>
                 </div>
                 <ul>
-                    <li>Built low-latency streaming service for dual camera feeds with TLS and authentication</li>
-                    <li>Designed PostgreSQL schemas and CRUD APIs with JWT authentication</li>
-                    <li>Implemented Next.js server components to optimize TTFB for stream dashboards</li>
+                    <li>Built a low-latency streaming service for dual camera feeds; added TLS and auth; used efficient
+                        buffering and server-push.</li>
+                    <li>Designed PostgreSQL schemas and CRUD APIs (JWT) and structured logging.</li>
+                    <li>Implemented Next.js server components where useful to shrink TTFB for stream dashboards.</li>
                 </ul>
             </div>
 
@@ -526,12 +531,14 @@
                     <div class="timeline-date">Sep 2022 – Sep 2024</div>
                 </div>
                 <ul>
-                    <li>Comprehensive evaluation of convolutional vs transformer models for 3D PET/CT tumor segmentation
+                    <li>Comprehensive evaluation on convolutional versus transformer-based models for 3D PET/CT tumor
+                        segmentation, achieving SOTA F1 = 0.70 on a multi-cancer imbalanced dataset; packaged
+                        training/eval in reproducible PyTorch pipelines.
                     </li>
-                    <li>Achieved state-of-the-art F1 = 0.70 on multi-cancer imbalanced dataset</li>
-                    <li>Optimized SAM mask-decoder with ONNX, reducing inference latency by 25% and memory by 150 MB
+                    <li>Optimized SAM mask-decoder with ONNX, reducing inference latency and memory usage.
                     </li>
-                    <li>Published first-author paper accepted at SPIE Medical Imaging 2025</li>
+                    <li>Wrote the first-author paper (accepted SPIE Medical Imaging 2025); owned experiments, ablations,
+                        and result visualizations.</li>
                 </ul>
             </div>
 
@@ -544,9 +551,14 @@
                     <div class="timeline-date">Apr 2021 – Dec 2021</div>
                 </div>
                 <ul>
-                    <li>Developed adaptive filtering and DSP algorithms for ECG signal denoising</li>
-                    <li>Improved denoising accuracy by 15% and runtime efficiency by 40%</li>
-                    <li>Investigated multi-scale methods including EMD, ICA, and Wavelet Transform</li>
+                    <li>Developed and optimized adaptive filtering and digital signal processing-based algorithms in
+                        Java to remove high and low frequency noise from ECG signals, improving denoising accuracy by
+                        15% and runtime efficiency by 40%.</li>
+                    <li>Investigated multi-scale and data-driven denoising methods including Empirical Mode
+                        Decomposition (EMD), Independent Component Analysis (ICA), and Wavelet Transform for potential
+                        integration in real-time cardiac monitoring systems.</li>
+                    <li>Contributed to algorithmic validation and quantitative benchmarking using synthetic and
+                        real-world datasets; produced reproducible scripts and visualizations in MATLAB.</li>
                 </ul>
             </div>
 
@@ -559,10 +571,10 @@
                     <div class="timeline-date">Mar 2021 – Mar 2022</div>
                 </div>
                 <ul>
-                    <li>Improved fire detection accuracy by 10% over state-of-the-art by developing CNN architectures
-                        (VGG, ResNet, GoogLeNet) in TensorFlow</li>
-                    <li>Curated and labeled a dataset of thermal fire images with JSON annotation schema</li>
-                    <li>Removed duplicates and corrected noisy labels to improve data quality</li>
+                    <li>Improved the accuracy of fire detection by 10% over state-of-the-art by developing CNN
+                        architectures (VGG, ResNet, GoogLeNet) in TensorFlow.</li>
+                    <li>Curated and labeled a dataset of thermal fire images; wrote labeling guidelines, defined a JSON
+                        annotation schema, removed duplicates, and corrected noisy labels to improve data quality.</li>
                 </ul>
             </div>
         </div>
