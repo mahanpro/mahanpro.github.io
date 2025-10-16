@@ -432,8 +432,6 @@
             <div style="display: flex; align-items: center; gap: 3rem; flex-wrap: wrap;">
                 <div class="profile-photo-container">
                     <img src="profile.jpg" alt="Mahan Pouromidi" class="profile-photo" id="profilePhoto">
-                    <label for="photoUpload" class="photo-upload-label">Upload Photo</label>
-                    <input type="file" id="photoUpload" accept="image/*" style="display: none;">
                 </div>
                 <div style="flex: 1; min-width: 300px;">
                     <h1>Mahan Pouromidi</h1>
@@ -682,20 +680,6 @@
             <p>&copy; 2025 Mahan Pouromidi. All rights reserved.</p>
         </div>
     </footer>
-
-    <script>
-        // Photo upload functionality
-        document.getElementById('photoUpload').addEventListener('change', function (e) {
-            const file = e.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function (e) {
-                    document.getElementById('profilePhoto').src = e.target.result;
-                };
-                reader.readAsDataURL(file);
-            }
-        });
-    </script>
 </body>
 
 </html>
